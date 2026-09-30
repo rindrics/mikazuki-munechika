@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { AuthProvider } from "@/contexts/auth-context";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { GtmScript } from "@/components/gtm-script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="h-full">
+      <head>
+        <GtmScript />
+      </head>
       <body className="min-h-screen flex flex-col">
         <AuthProvider>
           <Navbar />
