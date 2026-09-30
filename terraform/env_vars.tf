@@ -1,4 +1,6 @@
-# Supabase
+# Mixing sensitive = true and sensitive = false in one
+# vercel_project_environment_variables resource makes Terraform fail
+# after apply with "inconsistent values for sensitive attribute".
 
 resource "vercel_project_environment_variables" "production" {
   project_id = data.vercel_project.main.id
@@ -14,12 +16,6 @@ resource "vercel_project_environment_variables" "production" {
       value     = var.supabase_anon_key_production
       target    = ["production"]
       sensitive = false
-    },
-    {
-      key       = "SUPABASE_SERVICE_ROLE_KEY"
-      value     = var.supabase_service_role_key_production
-      target    = ["production"]
-      sensitive = true
     },
     {
       key       = "LOG_LEVEL"
@@ -44,6 +40,18 @@ resource "vercel_project_environment_variables" "production" {
       value     = "false"
       target    = ["production"]
       sensitive = false
+    },
+  ]
+}
+
+resource "vercel_project_environment_variables" "production_secrets" {
+  project_id = data.vercel_project.main.id
+  variables = [
+    {
+      key       = "SUPABASE_SERVICE_ROLE_KEY"
+      value     = var.supabase_service_role_key_production
+      target    = ["production"]
+      sensitive = true
     },
     {
       key       = "SENTRY_AUTH_TOKEN"
@@ -70,6 +78,8 @@ resource "vercel_project_environment_variables" "production" {
       sensitive = true
     },
   ]
+
+  depends_on = [vercel_project_environment_variables.production]
 }
 
 resource "vercel_project_environment_variables" "preview" {
@@ -88,12 +98,6 @@ resource "vercel_project_environment_variables" "preview" {
       sensitive = false
     },
     {
-      key       = "SUPABASE_SERVICE_ROLE_KEY"
-      value     = var.supabase_service_role_key_preview
-      target    = ["preview"]
-      sensitive = true
-    },
-    {
       key       = "LOG_LEVEL"
       value     = "DEBUG"
       target    = ["preview"]
@@ -116,6 +120,24 @@ resource "vercel_project_environment_variables" "preview" {
       value     = "true"
       target    = ["preview"]
       sensitive = false
+    },
+    {
+      key       = "NEXT_OTEL_VERBOSE"
+      value     = "1"
+      target    = ["preview"]
+      sensitive = false
+    },
+  ]
+}
+
+resource "vercel_project_environment_variables" "preview_secrets" {
+  project_id = data.vercel_project.main.id
+  variables = [
+    {
+      key       = "SUPABASE_SERVICE_ROLE_KEY"
+      value     = var.supabase_service_role_key_preview
+      target    = ["preview"]
+      sensitive = true
     },
     {
       key       = "SENTRY_AUTH_TOKEN"
@@ -141,13 +163,9 @@ resource "vercel_project_environment_variables" "preview" {
       target    = ["preview"]
       sensitive = true
     },
-    {
-      key       = "NEXT_OTEL_VERBOSE"
-      value     = "1"
-      target    = ["preview"]
-      sensitive = false
-    },
   ]
+
+  depends_on = [vercel_project_environment_variables.preview]
 }
 
 resource "vercel_project_environment_variables" "development" {
