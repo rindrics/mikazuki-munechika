@@ -1,7 +1,10 @@
 title: 資源評価 web 📖
 description: A Jekyll site
 baseurl: ""
-url: ""
+url: "https://docs.mikazuki-munechika.rindrics.com"
 
 markdown: kramdown
 theme: just-the-docs
+
+plugins:
+  - jekyll-sitemap

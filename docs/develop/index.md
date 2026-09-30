@@ -10,7 +10,7 @@ This project uses three environments below:
 
 - **Development**: local machine
 - **Preview**: Vercel preview env (related ADR: [ADR-0001](https://github.com/Rindrics/mikazuki-munechika/blob/main/adr/0001-use-nextjs.md))
-- [**Production**](https://stock-assessment.learn-to.live)
+- [**Production**](https://mikazuki-munechik.rindrics.com)
 
 ## Setup your Development environment
 
