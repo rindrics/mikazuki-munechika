@@ -10,4 +10,4 @@
 > [!IMPORTANT]
 > This is an unofficial project
 
-Web document: https://docs.stock-assessment.learn-to.live/
+Web document: https://docs.mikazuki-munechika.rindrics.com/

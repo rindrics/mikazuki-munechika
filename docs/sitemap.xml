@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://docs.stock-assessment.learn-to.live/</loc>
+    <loc>https://docs.mikazuki-munechika.rindrics.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://docs.stock-assessment.learn-to.live/references.html</loc>
+    <loc>https://docs.mikazuki-munechika.rindrics.com/references.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://docs.stock-assessment.learn-to.live/develop/</loc>
+    <loc>https://docs.mikazuki-munechika.rindrics.com/develop/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://docs.stock-assessment.learn-to.live/sitemap.xml
+Sitemap: https://docs.mikazuki-munechika.rindrics.com/sitemap.xml
