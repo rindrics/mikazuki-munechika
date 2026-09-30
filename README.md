@@ -1,7 +1,8 @@
 > [!WARNING]
 > this project is archived.
-> 
+>
 > see:
+>
 > - https://github.com/Rindrics/souzasamonji
 > - https://rindrics.com/posts/stock-assess-restart/
 
