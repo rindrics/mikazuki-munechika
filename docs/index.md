@@ -11,6 +11,6 @@ nav_order: 1
 
 ---
 
-Blog posts about this app: [`https://rindrics.com/tags/mikazuki-munechika/`](ttps://rindrics.com/tags/mikazuki-munechika/)
+Blog posts about this app: [`https://rindrics.com/tags/mikazuki-munechika/`](https://rindrics.com/tags/mikazuki-munechika/)
 
 (`mikazuki-munechika` is the development codename, named after the Japanese sword "三日月宗近")
